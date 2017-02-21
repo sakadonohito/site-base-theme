@@ -1,0 +1,29 @@
+{
+  "name": "base-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "watch": "webpack --watch --progress",
+    "build": "unset NODE_ENV && webpack",
+    "build:prod": "export NODE_ENV=production && webpack",
+    "clean": "rm -rf ./sample/css/custom/*.css && rm -rf ./sample/js/custom/*.js"
+  },
+  "author": "osawa",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.1.1",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "description": "for static site base theme",
+  "keywords": [
+    "template"
+  ]
+}
