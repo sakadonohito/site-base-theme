@@ -11,6 +11,8 @@ body {
 	@include default_box();
 	font-size: $font-size-base;
 	color: $font-color-base;	
+	width: 100vw;
+	height: 100vh;
 }
 
 div.wrapper {
@@ -36,15 +38,15 @@ header {
 }
 
 header * {
-	width: 100%;
+	width: 100vw;
 	text-align: center;
 }
 header div.header-image-main {
-	width: 100%;
+	width: 100vw;
 	height: calc(100vh/6);
 }
 header div.header-image-main img {
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 }
 
@@ -56,7 +58,7 @@ header div.header-image-main img {
 		padding-top: 2rem;
 	}
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 768px) and (max-width: 1024px) {
 	header div.header-image-main {
 		display: none;
 	}
