@@ -11,14 +11,14 @@ body {
 	@include default_box();
 	font-size: $font-size-base;
 	color: $font-color-base;	
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 }
 
 div.wrapper {
 	display: flex;
 	min-height: 100vh;
-	width: 100vw;
+	width: 100%;
 	flex-direction: column;
 }
 
@@ -32,37 +32,37 @@ div.wrapper {
 	flex-direction: row;
 }
 
-header {
+header.site-main {
 	display: flex;
 	flex-direction: column;
 }
 
-header * {
-	width: 100vw;
+header.site-main * {
+	width: 100%;
 	text-align: center;
 }
-header div.header-image-main {
-	width: 100vw;
+header.site-main div.header-image-main {
+	width: 100%;
 	height: calc(100vh/6);
 }
-header div.header-image-main img {
-	width: 100vw;
+header.site-main div.header-image-main img {
+	width: 100%;
 	height: 100%;
 }
 
 @media screen and (max-width: 768px) {
-	header div.header-image-main {
+	header.site-main div.header-image-main {
 		display: none;
 	}
-	header h1 {
+	header.site-main h1 {
 		padding-top: 2rem;
 	}
 }
 @media screen and (max-height: 768px) and (max-width: 1024px) {
-	header div.header-image-main {
+	header.site-main div.header-image-main {
 		display: none;
 	}
-	header h1 {
+	header.site-main h1 {
 		padding-top: 2rem;
 	}
 }
@@ -72,15 +72,14 @@ div.main-part {
 	flex-direction: row;
 }
 @media screen and (max-width: 414px) {
-div.main-part {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-}
-
-aside div.side-menu {
-	padding-left: 2rem;
-}
+	div.main-part {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	aside div.side-menu {
+		padding-left: 2rem;
+	}
 }
 
 div.main-contents {
@@ -90,6 +89,7 @@ div.main-contents {
 	flex-direction: column;
 }
 
+div.main-contents h1,
 div.main-contents h2 {
 	text-align: center;
 }
