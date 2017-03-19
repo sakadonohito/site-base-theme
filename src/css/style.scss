@@ -70,6 +70,7 @@ div.main-part {
 	flex: 1;
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-end;
 }
 @media screen and (max-width: 414px) {
 	div.main-part {
@@ -89,48 +90,66 @@ div.main-contents {
 	flex-direction: column;
 }
 
-div.main-contents h1,
-div.main-contents h2 {
+div.main-contents > h1,
+div.main-contents > h2 {
 	text-align: center;
 }
 
-div.main-contents div.article-list,
-div.main-contents article.main-content {
+div.main-contents div.article-list {
 	align-self: center;
 }
 
-div.article-list article,
-article.main-content {
-	width: calc(100vw*3/4);
+div.article-list article {
+	width: calc(100vw*0.49);
 }
 @media screen and (max-width: 414px) {
-	div.article-list article,
-	article.main-content {
+	div.article-list article {
 		width: 100vw;
 	}
+}
+
+article.main-content {
+	width: calc(100vw*0.6);
+}
+@media screen and (max-width: 414px) {
+	article.main-content {
+		width: 85vw;
+	}
+}
+
+@media screen and (min-width: 767px) {
+	 ul.horizontal-list-over767 {
+		 padding-left: 0px;
+		 text-align: left;
+	 }
+	 ul.horizontal-list-over767 li {
+		 list-style-type: none;
+		 display: inline;
+		 padding-right: 2rem;
+	 }
 }
 
 aside {
 	width: calc(100vw/4);
 }
 @media screen and (max-width: 414px) {
-aside {
-	width: 100%;
-}
+	aside {
+		width: 100%;
+	}
 }
 
-footer {
+footer.site-footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	padding-bottom: 1rem;
 }
 @media screen and (max-width: 414px) {
-footer {
+footer.site-footer {
 	display: flex;
 	flex-direction: column;
 }
-footer span {
+footer.site-footer span {
 	text-align: center;
 }
 }
